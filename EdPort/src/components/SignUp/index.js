@@ -15,6 +15,7 @@ const SignUpPage = () => (
 const INITIAL_STATE = {
   username: '',
   email: '',
+  type: '',
   passwordOne: '',
   passwordTwo: '',
   error: null,
@@ -29,20 +30,16 @@ class SignUpFormBase extends Component {
   }
 
   onSubmit = event => {
-    const { username, email, passwordOne } = this.state;
+    const { username, email, passwordOne, type} = this.state;
 
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
         return this.props.firebase.db.collection("Users").doc(authUser.user.uid)
-        //.user(authUser.user.uid)
         .set({
           username: username,
           email: email,
-          balance: 500,
-          correctBets: 0,
-          totalBets: 0,
-          accuracy: 0.5
+          type: type
         }).then(() => {
           this.setState({ ...INITIAL_STATE });
           this.props.history.push(ROUTES.HOME);
@@ -63,6 +60,7 @@ class SignUpFormBase extends Component {
     const {
       username,
       email,
+      type,
       passwordOne,
       passwordTwo,
       error,
@@ -92,6 +90,13 @@ class SignUpFormBase extends Component {
           type="text"
           placeholder="Email Address"
         />
+        <Input
+            name="type"
+            value={type}
+            onChange={this.onChange}
+            type="text"
+            placeholder="Account Type"
+          />
       <Input
           name="passwordOne"
           value={passwordOne}
@@ -106,7 +111,6 @@ class SignUpFormBase extends Component {
           type="password"
           placeholder="Confirm Password"
         />
-
       <Button color ="primary" disabled={isInvalid} type="submit">Sign Up</Button>
 
         {error && <p>{error.message}</p>}
