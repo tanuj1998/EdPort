@@ -9,3 +9,27 @@
   font-size: 20px;
   font-weight: bold;
 }
+
+body.dark-mode {
+  background-color: #111;
+  color: #eee;
+  a {
+    color: #111;
+  }
+  button {
+    background-color: #eee;
+    color: #111;
+  }
+}
+
+body.light-mode {
+  background-color: #eee;
+  color: #111;
+  a {
+    color: #111;
+  }
+  button {
+    background-color: #111;
+    color: #eee;
+  }
+}

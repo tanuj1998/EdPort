@@ -23,24 +23,12 @@ class HomePage extends Component {
     });
   }
 
-
   render() {
     return (
       <AuthUserContext.Consumer>
       {authUser => (
-      <div>
-
         <div className="home-page">
-          <h1>Welcome to EdPort, {this.state.username}</h1>
-
-            <div className="row">
-                <div className="column small-centered small-11 medium-6 large-5">
-
-
-            </div>
-          </div>
-        </div>
-
+          <h1>Welcome, {this.state.username}</h1>
         </div>
       )}
       </AuthUserContext.Consumer>

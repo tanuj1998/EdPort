@@ -4,7 +4,7 @@ import * as ROUTES from '../../constants/routes';
 
 
 const NavigationNonAuth = () => (
-  <div>
+  <div className = "top-bar">
     <div div className="top-bar-right">
     <ul className="vertical medium-horizontal menu">
       <li>

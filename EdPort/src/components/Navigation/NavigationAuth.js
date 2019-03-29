@@ -6,7 +6,7 @@ import * as ROUTES from "../../constants/routes";
 
 
 const NavigationAuth = () => (
-  <div>
+  <div className="top-bar">
     <div div className="top-bar-right">
       <ul className="vertical medium-horizontal menu">
         <li>
@@ -27,6 +27,16 @@ const NavigationAuth = () => (
             activeStyle={{ fontWeight: "bold" }}
           >
             Account
+          </Link>
+        </li>
+        <li>
+          <Link
+            to={ROUTES.GRADES}
+            className="menu-text1"
+            activeClassName="active"
+            activeStyle={{ fontWeight: "bold" }}
+          >
+            Grades
           </Link>
         </li>
         <li>
