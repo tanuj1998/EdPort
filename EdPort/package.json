@@ -7,7 +7,7 @@
     "css-loader": "^0.23.1",
     "firebase": "^5.8.3",
     "foundation-sites": "^6.2.0",
-    "jquery": "^2.2.4",
+    "jquery": "^3.4.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-router-dom": "^4.3.1",
