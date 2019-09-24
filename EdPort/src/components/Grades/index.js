@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { AuthUserContext, withAuthorization } from '../Session';
 
 class Grades extends Component {
-
-
   render() {
     return (
       <div>
