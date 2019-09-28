@@ -3,12 +3,12 @@ import 'firebase/auth';
 import 'firebase/firestore';
 
 const config = {
-  apiKey: "AIzaSyBsYe3QbfgsP81On_VKmsQpd51z1OnTf28",
-  authDomain: "edport-360cc.firebaseapp.com",
-  databaseURL: "https://edport-360cc.firebaseio.com",
-  projectId: "edport-360cc",
-  storageBucket: "edport-360cc.appspot.com",
-  messagingSenderId: "54401522665"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: ""
   };
 
   class Firebase {
